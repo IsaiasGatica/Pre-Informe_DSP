@@ -1,0 +1,93 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[a4paper,top=2cm,bottom=2cm,left=2cm,right=2cm,marginparwidth=2cm]{geometry}
+
+\title{Pre-Informe Trabajo final}
+\author{Grupo 2}
+\date{Mayo 2020 - DSP}
+
+\begin{document}
+\maketitle
+\section{Marco teórico}
+Con la finalidad de explicar el funcionamineto de la transformada de Wavelet se comenzara respondiendo la siguiente pregunta:
+¿Porqué es importa la transformada Wavelet en el procesamiento digital de señales?.\\
+Para responder esta pregunta primero definimos que es una señal estacionaria y una señal no estacionaria:
+\begin{itemize}
+    \item Señal estacionaria: en este tipo de señales la frecuencia no varia en el tiempo (Fig 1).
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.45]{Fig/1}
+        \caption{Ejemplo de señal estacionaria. Fuente:}
+        \label{fig1}
+      \end{figure}
+    \item Señal no estacionaria: este tipo de señales presenta variaciones en las componentes de frecuencia a lo largo del tiempo (Fig 2).
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.45]{Fig/2}
+        \caption{Ejemplo de señal no estacionaria. Fuente:}
+        \label{fig1}
+      \end{figure}
+\end{itemize}
+Si queremos extraer información de este tipo de señales es inmediato pensar en el analisis en frecuencia y por lo tanto en la transformada de Fourier:
+\begin{equation}
+    X(\Omega) = \int_{-\infty}^{\infty} x(t)e^{-j\Omega t}dt
+\end{equation}
+Esta ecuación brinda una representación en el dominio de la frecuencia de una señal estacionaria, ya que $\Omega$ esta definida para todo el 
+intervalo $(-\infty,\infty)$. Por lo tanto, la transformada de fourier brinda resultados óptimos cuando el contenido de frecuencia de la señal no cambia en el tiempo. Si se requiere 
+analizar una señal como, por ejemplo, la de la figura 2 con la transformda de fourier, obtendriamos las componentes de frecuencia presentes en esta señal pero no tendriamos ningun tipo de 
+iformacíon temporal del momento en el que cambia la frecuencia y tampoco donde se produce el spike \footnote{Irregularidad en la señal VER}. Esta información es muy importante para analizar, por ejemplo, sistemas físicos donde se quiera averiguar el tiempo en que la frecuencia de oscilación o la densidad de un material x cambie,
+y utilizarla para encontrar el fenómeno que la produce.\\
+AGREGAR FIGURAS QUE MUESTREN LO ANTERIOR Y TAMBIEN LO DEL SPIKE\\
+Debido a este inconveniente con la transformada de Fourier, \textit{Dennis Gabor} plantea una solución que se basa en ventanas temporales. Es decir, se utiliza una ventana de longitud fija y se la desplaza 
+por la señal a analizar, en cada desplazamiento se realizar la transformada de fourier a la porción de la señal encerrada en esta ventana. Esta transformada llamada STFT (Short Time Fourier Transform) lleva la información obtenida en el 
+dominio del tiempo (segmento relacionado con la ventana) a la escala bidemensional de tiempo-frecuencia, dando como resultado cuándo y a que frecuencia ocurre un suceso de interés. Aunque este tipo de transformada resuelve el problema de obtener 
+información temporal de los cambios de frecuencia, presenta problemas a la hora de elegir la ``mejor'' ventaja para cada señal. Por ejemplo, si las componentes de frecuencia de una señal 
+estan bien separadas una de otras, se puede sacrificar resolución en frecuencia y mejorar la resolución en tiempo, esta decisión modifica la escala de la ventana a utilizar. De forma general:
+\begin{itemize}
+    \item Ventana estrecha: Buena resolución en tiempo pero pobre en frecuencia.
+    \item Ventana ancha: Buena resolucion de la frecuencia pero pobre en el dominio temporal.
+\end{itemize}
+Debido a esto, el problema recae en que si la señal presenta cambios bruscos de la frecuencia, se debe elegir una ventana que actue de la mejor forma 
+para todas las frecuencias presentes. Esto generaria perdidas de resolución en algunos segmentos y por lo tanto perdidas de detalles.\\
+Finalmente, desarrollamos la Transformada Wavelet o tambien llamada Transformada ondeleta. Esta transformada soluciona los problemas que presenta la 
+transformada de Gabor, utilizando un análisis multiresolución con ventanas de longitud variable las cuales se adaptan a la frecuencia de la señal. Es decir, mientras que con la transformada de 
+Gabor teniamos una ventaja fija para el análisis, ahora es posible tener ventanas que cumplan lo siguiente:
+\begin{itemize}
+    \item Si se necesia mayor precisión en baja frecuencia la ventana tiene un intervalo temporal grande.
+    \item Si se necesita mayor información en alta frecuencia, la ventana tendra un intervalo temporal mas pequeño.
+\end{itemize}
+Esto es analógo a lo presentando para la transformada de Gabor, con la principal diferencia que ahora podemos cumplir los dos requerimientos de forma simultanea. Si vemos la figura \ref{comp} observamos como la transformada de Gabor tiene ventanas de longitud fija (subfigura a).
+Si se oberva la subfigura b, relacionada a la transformada Wavelet, es facil ver la diferencia en las ventanas utilizadas:
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.45]{Fig/6}
+    \caption{a) Esquema de las ventanas en la transformada de Gabor. b) Esquema de las ventanas en la transformada Wavelet}
+    \label{comp}
+\end{figure}
+En la subfigura b de la figura \ref{comp} se observa en color verde la ventana que cumple el primer item. Es decir, se requiere analizar componentes de baja frecuencia y por lo tanto el intervalo temporal es grande (ventana amplia). El otro item se ve en la ventana azul, para un analisis 
+en grandes frecuencias la ventana temporal sera pequeña (ventana angosta). Por otro lado, en la subifigura a) vemos la ventana en naranja correspondiente a la transformada de Gabor que no tiene en cuenta estos aspectos.\\
+Estas ventanas presentadas de forma esquemática en la figura \ref{comp} tiene una forma especifica y es lo le da el nombre a esta transformada. Una \textit{Wavelet} es una ``pequeña onda'' que tiene su energia concentrada en un periodo de tiempo determinado, son de duración definida, irregulares y asimétricas, lo que les permite 
+adaptarse y converger de mejor manera a la señal que se quiere analizar. Haciendo un paralelismo con la tranformada de fourier donde se utilizan senos y cosenos para representar una señal, aqui se utiliza una \textit{Wavelet Madre} y sus ``Wavelets hijas'' o ``átomos de wavelet''. Es decir, mientras que con fourier se agregan senos y cosenos para lograr 
+una mejor representación, aqui se agregan Wavelets hijas. Con el fin de explicar esto planteamos la Transformada Wavelet continua:
+\begin{equation}
+    \label{TOC}
+    T(a,b)= \frac{1}{sqrt(a)} \int_{-\infty}^{\infty} x(t) \Psi(\frac{t-b}{a}) dt
+\end{equation}
+
+Las wavelets hijas mencionadas corresponden a una traslación y/o dilatación (escala) de la Wavelet Madre ($\Psi$), segun corresponda el análisis. La escala esta representada por el coeficiente $a$ y la traslación por $b$ (en la ecuación \ref{TOC}). Si relacionamos esto con los items (poner numuero los items), si $a<1$ la información obtenida de la transformada va estar localizada en el dominio del tiempo (buena resolución temporal) y si 
+$a>1$ la información esta localizada en el dominio de la frecuencia (buena resolución en frecuencia). El coeficiente $b$ simplemente desplaza temporalmente la ventana. Algunas de las Wavelets Madres mas utilizads son:
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{Fig/7}
+    \caption{Tipos de Wavelet Madres más utilizadas. Fuente:}
+    \label{WM}
+\end{figure}
+
+
+
+
+\end{document}
