@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1591660392 "d:/Isaias/Documents/Facultad/DSP/Trabajo Final/Pre-Informe/Pre_Informe_DSP.tex" "d:/Isaias/Documents/Facultad/DSP/Trabajo Final/Pre-Informe/build/Pre_Informe_DSP.pdf" "Pre_Informe_DSP" 1591660393
+["pdflatex"] 1591909228 "d:/Isaias/Documents/Git/Pre-Informe_DSP/Pre_Informe_DSP.tex" "d:/Isaias/Documents/Git/Pre-Informe_DSP/build/Pre_Informe_DSP.pdf" "Pre_Informe_DSP" 1591909229
   "C:/Users/Isaia/AppData/Local/MiKTeX/2.9/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1585898563 11548 10b0c5330010a2420968610c8dd8d0ef ""
   "C:/Users/Isaia/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt" 1585613136 9852523 e4c826383ab404c31b84ad513c4e82a8 ""
   "C:/Users/Isaia/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map" 1591338748 77580 0902bf85dfadfdef13ad4bb0cb98be38 ""
@@ -56,15 +56,15 @@
   "C:/Users/Isaia/AppData/Local/Programs/MiKTeX 2.9/tex/latex/l3backend/l3backend-pdfmode.def" 1580757030 25404 9d60f463a00d154207ec0048dee27cf0 ""
   "Fig/1.png" 1591646009 61179 d326bed241f8be744074a68f7cdbc4d2 ""
   "Fig/2.png" 1591646034 64802 9dc62d08e35d2ec4b192603c89c4923e ""
-  "Fig/6.png" 1591656495 35923 f1854078c5bac28b24c6d412dbe18397 ""
+  "Fig/66.png" 1591909056 36910 8868f061e22139f8113be46ce6583bf6 ""
   "Fig/7.png" 1591660325 51697 cdf2ecbc8ca76d2fcb4846345c0c261a ""
-  "Pre_Informe_DSP.tex" 1591660391 7878 3e955081784d6bdbf437f2f40b89230e ""
-  "build/Pre_Informe_DSP.aux" 1591660393 867 670bf6b15556602b27918681b10fa2c3 "pdflatex"
-  "d:/Isaias/Documents/Facultad/DSP/Trabajo Final/Pre-Informe/Pre_Informe_DSP.tex" 1591660391 7878 3e955081784d6bdbf437f2f40b89230e ""
-  "d:/Isaias/Documents/Facultad/DSP/Trabajo Final/Pre-Informe/build/Pre_Informe_DSP.aux" 1591660393 867 670bf6b15556602b27918681b10fa2c3 ""
+  "Pre_Informe_DSP.tex" 1591909228 5567 5a73f9c0739b30855d55b26ba18efc1f ""
+  "build/Pre_Informe_DSP.aux" 1591909229 808 fe994368afb417ff70d10e0acb06f685 "pdflatex"
+  "d:/Isaias/Documents/Git/Pre-Informe_DSP/Pre_Informe_DSP.tex" 1591909228 5567 5a73f9c0739b30855d55b26ba18efc1f ""
+  "d:/Isaias/Documents/Git/Pre-Informe_DSP/build/Pre_Informe_DSP.aux" 1591909229 808 fe994368afb417ff70d10e0acb06f685 ""
   (generated)
-  "build/Pre_Informe_DSP.pdf"
   "build/Pre_Informe_DSP.aux"
+  "d:/Isaias/Documents/Git/Pre-Informe_DSP/build/Pre_Informe_DSP.pdf"
+  "d:/Isaias/Documents/Git/Pre-Informe_DSP/build/Pre_Informe_DSP.log"
+  "build/Pre_Informe_DSP.pdf"
   "build/Pre_Informe_DSP.log"
-  "d:/Isaias/Documents/Facultad/DSP/Trabajo Final/Pre-Informe/build/Pre_Informe_DSP.log"
-  "d:/Isaias/Documents/Facultad/DSP/Trabajo Final/Pre-Informe/build/Pre_Informe_DSP.pdf"

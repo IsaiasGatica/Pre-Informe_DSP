@@ -1,7 +1,7 @@
-PWD d:\Isaias\Documents\Facultad\DSP\Trabajo Final\Pre-Informe
+PWD d:\Isaias\Documents\Git\Pre-Informe_DSP
 INPUT C:\Users\Isaia\AppData\Local\MiKTeX\2.9\miktex\data\le\pdftex\pdflatex.fmt
-INPUT d:\Isaias\Documents\Facultad\DSP\Trabajo Final\Pre-Informe\Pre_Informe_DSP.tex
-OUTPUT d:\Isaias\Documents\Facultad\DSP\Trabajo Final\Pre-Informe\build\Pre_Informe_DSP.log
+INPUT d:\Isaias\Documents\Git\Pre-Informe_DSP\Pre_Informe_DSP.tex
+OUTPUT d:\Isaias\Documents\Git\Pre-Informe_DSP\build\Pre_Informe_DSP.log
 INPUT C:\Users\Isaia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls
 INPUT C:\Users\Isaia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls
 INPUT C:\Users\Isaia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size10.clo
@@ -42,9 +42,9 @@ INPUT C:\Users\Isaia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geomet
 INPUT C:\Users\Isaia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.cfg
 INPUT C:\Users\Isaia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3backend\l3backend-pdfmode.def
 INPUT C:\Users\Isaia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3backend\l3backend-pdfmode.def
-INPUT d:\Isaias\Documents\Facultad\DSP\Trabajo Final\Pre-Informe\build\Pre_Informe_DSP.aux
-INPUT d:\Isaias\Documents\Facultad\DSP\Trabajo Final\Pre-Informe\build\Pre_Informe_DSP.aux
-OUTPUT d:\Isaias\Documents\Facultad\DSP\Trabajo Final\Pre-Informe\build\Pre_Informe_DSP.aux
+INPUT d:\Isaias\Documents\Git\Pre-Informe_DSP\build\Pre_Informe_DSP.aux
+INPUT d:\Isaias\Documents\Git\Pre-Informe_DSP\build\Pre_Informe_DSP.aux
+OUTPUT d:\Isaias\Documents\Git\Pre-Informe_DSP\build\Pre_Informe_DSP.aux
 INPUT C:\Users\Isaia\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\Isaia\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\Isaia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\epstopdf-pkg\epstopdf-base.sty
@@ -67,7 +67,7 @@ INPUT C:\Users\Isaia\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx1
 INPUT C:\Users\Isaia\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\tcrm1000.tfm
 INPUT Fig\1.png
 INPUT .\Fig\1.png
-OUTPUT d:\Isaias\Documents\Facultad\DSP\Trabajo Final\Pre-Informe\build\Pre_Informe_DSP.pdf
+OUTPUT d:\Isaias\Documents\Git\Pre-Informe_DSP\build\Pre_Informe_DSP.pdf
 INPUT .\Fig\1.png
 INPUT .\Fig\1.png
 INPUT .\Fig\1.png
@@ -79,18 +79,18 @@ INPUT .\Fig\2.png
 INPUT C:\Users\Isaia\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Users\Isaia\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Users\Isaia\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
+INPUT Fig\66.png
+INPUT .\Fig\66.png
+INPUT .\Fig\66.png
+INPUT .\Fig\66.png
+INPUT .\Fig\66.png
 INPUT C:\Users\Isaia\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmti10.tfm
-INPUT Fig\6.png
-INPUT .\Fig\6.png
-INPUT .\Fig\6.png
-INPUT .\Fig\6.png
-INPUT .\Fig\6.png
 INPUT Fig\7.png
 INPUT .\Fig\7.png
 INPUT .\Fig\7.png
 INPUT .\Fig\7.png
 INPUT .\Fig\7.png
-INPUT d:\Isaias\Documents\Facultad\DSP\Trabajo Final\Pre-Informe\build\Pre_Informe_DSP.aux
+INPUT d:\Isaias\Documents\Git\Pre-Informe_DSP\build\Pre_Informe_DSP.aux
 INPUT C:\Users\Isaia\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
 INPUT C:\Users\Isaia\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
 INPUT C:\Users\Isaia\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx12.pfb
