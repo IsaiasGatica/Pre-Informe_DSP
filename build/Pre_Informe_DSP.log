@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.30)  11 JUN 2020 18:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.30)  11 JUN 2020 20:07
 entering extended mode
 **d:/Isaias/Documents/Git/Pre-Informe_DSP/Pre_Informe_DSP.tex
 (d:/Isaias/Documents/Git/Pre-Informe_DSP/Pre_Informe_DSP.tex
@@ -129,6 +129,9 @@ File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 
 LaTeX Warning: Label `fig1' multiply defined.
 
+
+LaTeX Warning: Label `WM' multiply defined.
+
 )
 \openout1 = `Pre_Informe_DSP.aux'.
 
@@ -230,15 +233,15 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2425 strings out of 481556
- 34485 string characters out of 2913869
+ 2426 strings out of 481556
+ 34500 string characters out of 2913869
  281176 words of memory out of 3000000
- 17664 multiletter control sequences out of 15000+200000
- 537787 words of font info for 43 fonts, out of 3000000 for 9000
+ 17665 multiletter control sequences out of 15000+200000
+ 538094 words of font info for 44 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 30i,8n,25p,518b,286s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 30i,15n,25p,527b,286s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Isaia\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/Isaia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Isaia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Isaia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Isaia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Isaia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Isaia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Isaia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Isaia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Isaia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Isaia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Isaia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Isaia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Isaia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on d:/Isaias\Documents\Git\Pre-Informe_DSP\build\Pre_Informe_DSP.pdf (3 pages, 332084 bytes).
+Output written on d:/Isaias\Documents\Git\Pre-Informe_DSP\build\Pre_Informe_DSP.pdf (3 pages, 341255 bytes).
 PDF statistics:
  78 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

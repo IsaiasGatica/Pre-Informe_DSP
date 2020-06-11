@@ -60,21 +60,56 @@ En la figura \ref{comp} se observa en color verde la ventana que cumple el prime
 en grandes frecuencias la ventana temporal sera pequeña (ventana angosta).
 Estas ventanas presentadas de forma esquemática en la figura \ref{comp} tiene una forma especifica y es lo le da el nombre a esta transformada. Una \textit{Wavelet} es una ``pequeña onda'' que tiene su energia concentrada en un periodo de tiempo determinado, son de duración definida, irregulares y asimétricas, lo que les permite 
 adaptarse y converger de mejor manera a la señal que se quiere analizar. Haciendo un paralelismo con la tranformada de fourier donde se utilizan senos y cosenos para representar una señal, aqui se utiliza una \textit{Wavelet Madre} y sus ``Wavelets hijas'' o ``átomos de wavelet''. Es decir, mientras que con fourier se agregan senos y cosenos para lograr 
-una mejor representación, aqui se agregan Wavelets hijas. Con el fin de explicar esto planteamos la Transformada Wavelet continua:
+una mejor representación, aqui se agregan Wavelets hijas. Con el fin de explicar esto planteamos la familia wavelet (o wavelets hijas):
 \begin{equation}
-    \label{TOC}
-    T(a,b)= \frac{1}{sqrt(a)} \int_{-\infty}^{\infty} x(t) \Psi(\frac{t-b}{a}) dt
+    \label{WM}
+    \psi(a,b)(t)= \frac{1}{\sqrt{a}} \psi(\frac{t-b}{a})
 \end{equation}
-Las wavelets hijas mencionadas corresponden a una traslación y/o dilatación (escala) de la Wavelet Madre ($\Psi$), segun corresponda el análisis. La escala esta representada por el coeficiente $a$ y la traslación por $b$ (en la ecuación \ref{TOC}). Si relacionamos esto con los items (poner numuero los items), si $a<1$ la información obtenida de la transformada va estar localizada en el dominio del tiempo (buena resolución temporal) y si 
-$a>1$ la información esta localizada en el dominio de la frecuencia (buena resolución en frecuencia). El coeficiente $b$ simplemente desplaza temporalmente la ventana. Algunas de las Wavelets Madres mas utilizads son:
+Las wavelets hijas mencionadas corresponden a una traslación y/o dilatación (escala) de la Wavelet Madre ($\psi$), segun corresponda el análisis. La escala esta representada por el coeficiente $a$ y la traslación por $b$ (en la ecuación \ref{WM}). Si relacionamos esto con los items (poner numuero los items), si $a$ es pequeño la información obtenida de la transformada va estar localizada en el dominio del tiempo (buena resolución temporal) y si 
+$a$ es grande la información esta localizada en el dominio de la frecuencia (buena resolución en frecuencia). El coeficiente $b$ simplemente ``desplaza'' temporalmente la ventana. Algunas de las Wavelets Madres mas utilizads son:
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.5]{Fig/7}
     \caption{Tipos de Wavelet Madres más utilizadas. Fuente:}
     \label{WM}
 \end{figure}
+Finalmente, la transformada de wavelet continua (CWT) se define como la correlación entre la señal a transformar $f(t)$ y la expresión de la familia de wavelets $\psi(a,b)(t)$:
+\begin{equation}
+    CWT f(u,s)= \int_{-\infty}^{\infty} f(t) \frac{1}{\sqrt{a}} \psi(\frac{t-b}{a})dt
+\end{equation}
 
-
-
+\subsection*{Transformada Wavelet Discreta}
+Debido a la variabilidad de los parámetros de escala y traslación, en el marco continuo, es necesario discretizar el análisis con la finalidad 
+de luego implementar un análisis computacional, ya que estos coeficientes generan una gran cantidad de datos. Para lograr esto, aproximamos las integrales con sumatorias y representamos la 
+señal a estudiar como:
+\begin{equation}
+    \label{DWT}
+ f(t) = \sum_{k}\sum_{j} c_{j,k}\phi (t) + \sum_{k}\sum_{j} d_{j,k}\psi (t)
+\end{equation}
+En la ecuación \ref{DWT} la señal $f(t)$ se aproxima como una sumatoria de funciones wavelet $\psi (t)$ y funciones de escala $\phi (t)$. Donde las funciones wavelet representan los detalles finos de la señal y las funciones escala 
+realizan una aproximación. Con el fin de discretizar la función wavelet (ecuación \ref{WM}) se utiliza un muestreo exponencial para garantizar una mejor aproximación:
+\begin{equation}
+    \begin{split}
+        &a=a_0^{-j}\\
+        &b=nka_0^{-j}
+    \end{split}
+\end{equation}
+Reemplazando los coeficientes de escalamiento y desplazamiento ahora discretizados en la ecuacion \ref{WM}:
+\begin{equation}
+    \psi_{j,k}(t) = a_0^{j/2} \psi (a_0^jt-kn)
+\end{equation}
+Si se desea obtener una aproximación en niveles de resolución muy finos es necesario que el factor de escala sea $a=2^{-j}$ y $n=1$ (Teorema de sampleo de Shannon's) lo que garantiza una resolución de 
+$2^j$ (Debido a esto la señal resultante $f[n]$ tendra una longitud de $2^n$). Este procedemiento da como resultado:
+\begin{equation}
+    \psi_{j,k}(t) = 2^{j/2} \psi (2^jt-kn)
+\end{equation}
+De igual forma para las señales de escala se obtiene:
+\begin{equation}
+    \phi_{j,k}(t) = 2^{j/2} \phi (2^jt-kn)
+\end{equation}
+Una vez definida estas funciones podemos reescribir la ecuación \ref{DWT} como:
+\begin{equation}
+    f(t) = \sum_{k}\sum_{j} c_{j,k}2^{j/2} \phi (2^jt-kn)  + \sum_{k}\sum_{j} d_{j,k}2^{j/2} \psi (2^jt-kn)
+\end{equation}
 
 \end{document}
